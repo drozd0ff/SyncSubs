@@ -1,11 +1,55 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "SubtitlesParser/1.4.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SubtitlesParser.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SubtitlesParser.dll": {}
+        }
+      },
+      "Subtitle/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SubtitlesParser": "1.4.8"
+        },
+        "compile": {
+          "bin/placeholder/Subtitle.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Subtitle.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SubtitlesParser/1.4.8": {
+      "sha512": "9nWhe0TsSLPgfLYbVR/VScli/xTgdfJtLOBXMXqu0MOok4z9UQidCZgMYKyQnH/SXz3Df189WqIuxXDMfh8Z9A==",
+      "type": "package",
+      "path": "subtitlesparser/1.4.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SubtitlesParser.dll",
+        "subtitlesparser.1.4.8.nupkg.sha512",
+        "subtitlesparser.nuspec"
+      ]
+    },
+    "Subtitle/1.0.0": {
+      "type": "project",
+      "path": "../../ReadSubTest/Subtitle/Subtitle.csproj",
+      "msbuildProject": "../../ReadSubTest/Subtitle/Subtitle.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Subtitle >= 1.0.0",
+      "SubtitlesParser >= 1.4.8"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Admin-PC\\.nuget\\packages\\": {}
@@ -32,7 +76,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\ReadSubTest\\Subtitle\\Subtitle.csproj": {
+              "projectPath": "C:\\dev\\ReadSubTest\\Subtitle\\Subtitle.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -43,6 +91,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "SubtitlesParser": {
+            "target": "Package",
+            "version": "[1.4.8, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

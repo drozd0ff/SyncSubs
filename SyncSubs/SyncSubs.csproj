@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SubtitlesParser" Version="1.4.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ReadSubTest\Subtitle\Subtitle.csproj" />
+  </ItemGroup>
+
 </Project>

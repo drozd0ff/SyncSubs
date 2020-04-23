@@ -16,3 +16,8 @@ C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.AssemblyInfo.cs
 C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.dll
 C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.pdb
 C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.genruntimeconfig.cache
+C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.csprojAssemblyReference.cache
+C:\dev\SyncSubs\SyncSubs\bin\Debug\netcoreapp3.1\SubtitlesParser.dll
+C:\dev\SyncSubs\SyncSubs\bin\Debug\netcoreapp3.1\Subtitle.dll
+C:\dev\SyncSubs\SyncSubs\bin\Debug\netcoreapp3.1\Subtitle.pdb
+C:\dev\SyncSubs\SyncSubs\obj\Debug\netcoreapp3.1\SyncSubs.csproj.CopyComplete
