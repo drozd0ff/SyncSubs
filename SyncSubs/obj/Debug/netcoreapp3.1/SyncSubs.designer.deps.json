@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SubtitlesParser/1.4.8": {
+        "runtime": {
+          "lib/netstandard2.0/SubtitlesParser.dll": {
+            "assemblyVersion": "1.4.8.0",
+            "fileVersion": "1.4.8.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SubtitlesParser/1.4.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nWhe0TsSLPgfLYbVR/VScli/xTgdfJtLOBXMXqu0MOok4z9UQidCZgMYKyQnH/SXz3Df189WqIuxXDMfh8Z9A==",
+      "path": "subtitlesparser/1.4.8",
+      "hashPath": "subtitlesparser.1.4.8.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SyncSubs/1.0.0": {
+        "dependencies": {
+          "Subtitle": "1.0.0",
+          "SubtitlesParser": "1.4.8"
+        },
+        "runtime": {
+          "SyncSubs.dll": {}
+        }
+      },
+      "SubtitlesParser/1.4.8": {
+        "runtime": {
+          "lib/netstandard2.0/SubtitlesParser.dll": {
+            "assemblyVersion": "1.4.8.0",
+            "fileVersion": "1.4.8.0"
+          }
+        }
+      },
+      "Subtitle/1.0.0": {
+        "dependencies": {
+          "SubtitlesParser": "1.4.8"
+        },
+        "runtime": {
+          "Subtitle.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SyncSubs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SubtitlesParser/1.4.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nWhe0TsSLPgfLYbVR/VScli/xTgdfJtLOBXMXqu0MOok4z9UQidCZgMYKyQnH/SXz3Df189WqIuxXDMfh8Z9A==",
+      "path": "subtitlesparser/1.4.8",
+      "hashPath": "subtitlesparser.1.4.8.nupkg.sha512"
+    },
+    "Subtitle/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
