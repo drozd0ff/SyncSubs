@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using Subtitle;
+using SubtitlesParser.Classes.Parsers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using Microsoft.Win32;
-using Subtitle;
-using SubtitlesParser.Classes.Parsers;
 
 namespace SyncSubs
 {
@@ -59,6 +59,14 @@ namespace SyncSubs
                 {
                     resultSubtitleList.Add(new SubtitleFile(startTiming[k], endTiming[k], items[k].Lines));
                 }
+
+                string resultSubtitleString = string.Empty;
+                foreach (var subtitleFile in resultSubtitleList)
+                {
+                    resultSubtitleString += subtitleFile;
+                }
+
+                subtitleText1.Text = resultSubtitleString;
             }
         }
 

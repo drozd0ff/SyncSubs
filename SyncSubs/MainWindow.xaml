@@ -13,10 +13,10 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="90,25,0,0" Text="First subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="463,25,0,0" Text="Second subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Find" Grid.Column="1" HorizontalAlignment="Left" Margin="261,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click" RenderTransformOrigin="0.58,1.112"/>
+        <Button Content="Find" Grid.Column="1" HorizontalAlignment="Left" Margin="314,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click" RenderTransformOrigin="0.58,1.112"/>
         <Button Content="Find" Grid.Column="1" HorizontalAlignment="Left" Margin="618,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_1" RenderTransformOrigin="0.503,0.563"/>
         <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Margin="337,147,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
-        <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="45,88,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Name="subtitleText1"/>
+        <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="45,88,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Name="subtitleText1"/>
         <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="401,88,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Name="subtitleText2"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="106,59,0,0" Text="Num1" TextWrapping="Wrap" VerticalAlignment="Top" Name="firstNumberInput" />
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="487,59,0,0" Text="Num2" TextWrapping="Wrap" VerticalAlignment="Top" Name="secondNumberInput" />
