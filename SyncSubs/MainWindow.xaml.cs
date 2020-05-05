@@ -16,38 +16,44 @@ namespace SyncSubs
     {
         private SubParser parser = new SubParser();
 
-        private FileStream stream1;
-        private string filePath1;
-        private FileStream stream2;
-        private string filePath2;
+        private FileStream recipientStream;
+        private string recipientFilePath;
+        private FileStream donorStream;
+        private string donorFilePath;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Synchronize(int firstNum, int secondNum)
+        /// <summary>
+        /// Synchronize the first subtitle timing with second subtitle timing
+        /// </summary>
+        /// <param name="recipientNum">Represents the number of line in first subtitle file starting FROM which
+        ///                         it will sync timing with second file</param>
+        /// <param name="donorNum">Represents the number of line WITH which first subtitle file would sync</param>
+        private void Synchronize(int recipientNum, int donorNum)
         {
-            using (stream1)
-            using (stream2)
+            using (recipientStream)
+            using (donorStream)
             {
-                var items = parser.ParseStream(stream1);
-                var itemss = parser.ParseStream(stream2);
+                var recipientList = parser.ParseStream(recipientStream);
+                var donorList = parser.ParseStream(donorStream);
 
-                var startTiming = items.Select(x => x.StartTime).ToArray();
-                var endTiming = items.Select(x => x.EndTime).ToArray();
+                int[] recipientStartTimings = recipientList.Select(x => x.StartTime).ToArray();
+                int[] recipientEndTimings = recipientList.Select(x => x.EndTime).ToArray();
 
-                var startTimingSample = itemss.Select(x => x.StartTime).ToArray();
-                var endTimingSample = itemss.Select(x => x.EndTime).ToArray();
+                int[] donorStartTimings = donorList.Select(x => x.StartTime).ToArray();
+                int[] donorEndTimings = donorList.Select(x => x.EndTime).ToArray();
 
                 List<SubtitleFile> resultSubtitleList = new List<SubtitleFile>();
 
                 try
                 {
-                    for (; firstNum < startTiming.Length; firstNum++, secondNum++)
+                    for (; recipientNum < recipientStartTimings.Length; recipientNum++, donorNum++)
                     {
-                        startTiming[firstNum] = startTimingSample[secondNum];
-                        endTiming[firstNum] = endTimingSample[secondNum];
+                        recipientStartTimings[recipientNum] = donorStartTimings[donorNum];
+                        recipientEndTimings[recipientNum] = donorEndTimings[donorNum];
                     }
                 }
                 catch (Exception e)
@@ -55,9 +61,9 @@ namespace SyncSubs
                     MessageBox.Show(e.Message);
                 }
 
-                for (int k = 0; k < items.Count; k++)
+                for (int k = 0; k < recipientList.Count; k++)
                 {
-                    resultSubtitleList.Add(new SubtitleFile(startTiming[k], endTiming[k], items[k].Lines));
+                    resultSubtitleList.Add(new SubtitleFile(recipientStartTimings[k], recipientEndTimings[k], recipientList[k].Lines));
                 }
 
                 string resultSubtitleString = string.Empty;
@@ -66,7 +72,7 @@ namespace SyncSubs
                     resultSubtitleString += subtitleFile;
                 }
 
-                subtitleText1.Text = resultSubtitleString;
+                recipientText.Text = resultSubtitleString;
             }
         }
 
@@ -79,9 +85,9 @@ namespace SyncSubs
             };
             if (openFileDialog.ShowDialog() == true)
             {
-                subtitleText1.Text = File.ReadAllText(openFileDialog.FileName);
-                filePath1 = openFileDialog.FileName;
-                stream1 = new FileStream(openFileDialog.FileName, FileMode.Open);
+                recipientText.Text = File.ReadAllText(openFileDialog.FileName);
+                recipientFilePath = openFileDialog.FileName;
+                recipientStream = new FileStream(openFileDialog.FileName, FileMode.Open);
             }
         }
 
@@ -94,14 +100,21 @@ namespace SyncSubs
             };
             if (openFileDialog.ShowDialog() == true)
             {
-                subtitleText2.Text = File.ReadAllText(openFileDialog.FileName);
-                filePath2 = openFileDialog.FileName;
-                stream2 = new FileStream(openFileDialog.FileName, FileMode.Open);
+                donorText.Text = File.ReadAllText(openFileDialog.FileName);
+                donorFilePath = openFileDialog.FileName;
+                donorStream = new FileStream(openFileDialog.FileName, FileMode.Open);
             }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            if (!int.TryParse(firstNumberInput.Text, out int result) &&
+                !int.TryParse(secondNumberInput.Text, out int secondResult))
+            {
+                MessageBox.Show("Please fill number fields with numeric values");
+                return;
+            }
+
             Synchronize(Convert.ToInt32(firstNumberInput.Text), Convert.ToInt32(secondNumberInput.Text));
         }
     }

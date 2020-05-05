@@ -9,17 +9,20 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="777*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="677*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="90,25,0,0" Text="First subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="463,25,0,0" Text="Second subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Find" Grid.Column="1" HorizontalAlignment="Left" Margin="314,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click" RenderTransformOrigin="0.58,1.112"/>
-        <Button Content="Find" Grid.Column="1" HorizontalAlignment="Left" Margin="618,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_1" RenderTransformOrigin="0.503,0.563"/>
-        <Button Content="Submit" Grid.Column="1" HorizontalAlignment="Left" Margin="337,147,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
-        <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="45,88,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Name="subtitleText1"/>
-        <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="401,88,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Name="subtitleText2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="106,59,0,0" Text="Num1" TextWrapping="Wrap" VerticalAlignment="Top" Name="firstNumberInput" />
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="487,59,0,0" Text="Num2" TextWrapping="Wrap" VerticalAlignment="Top" Name="secondNumberInput" />
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="90,25,0,0" Text="First subtitles" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="363,25,0,0" Text="Second subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Find" Grid.Column="2" HorizontalAlignment="Left" Margin="221,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click" RenderTransformOrigin="0.58,1.112"/>
+        <Button Content="Find" Grid.Column="2" HorizontalAlignment="Left" Margin="518,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_1" RenderTransformOrigin="0.503,0.563"/>
+        <Button Content="Submit" Grid.Column="2" HorizontalAlignment="Left" Margin="221,147,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_2"/>
+        <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="45,88,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Name="recipientText" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="2" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="301,88,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Name="donorText"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="100,59,0,0" Text="Num1" TextWrapping="Wrap" VerticalAlignment="Top" Name="firstNumberInput" />
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="447,59,0,0" Text="Num2" TextWrapping="Wrap" VerticalAlignment="Top" Name="secondNumberInput" />
+        <Label Content="Recipient line number" Grid.Column="1" HorizontalAlignment="Left" Margin="45,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="125"/>
+        <Label Content="Donor line number" Grid.Column="2" HorizontalAlignment="Left" Margin="301,57,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
