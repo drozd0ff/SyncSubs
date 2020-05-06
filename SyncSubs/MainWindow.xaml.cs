@@ -115,7 +115,7 @@ namespace SyncSubs
                 return;
             }
 
-            Synchronize(Convert.ToInt32(firstNumberInput.Text), Convert.ToInt32(secondNumberInput.Text));
+            Synchronize(Convert.ToInt32(firstNumberInput.Text) - 1, Convert.ToInt32(secondNumberInput.Text) - 1);
         }
     }
 }
