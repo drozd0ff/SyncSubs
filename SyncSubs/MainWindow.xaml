@@ -14,15 +14,20 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="90,25,0,0" Text="First subtitles" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="363,25,0,0" Text="Second subtitles" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Find" Grid.Column="2" HorizontalAlignment="Left" Margin="221,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click" RenderTransformOrigin="0.58,1.112"/>
+
+        <Button Content="Find" Grid.Column="2" HorizontalAlignment="Left" Margin="221,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="FindRecipientFileButtonClick" RenderTransformOrigin="0.58,1.112"/>
         <Button Content="Find" Grid.Column="2" HorizontalAlignment="Left" Margin="575,81,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_1" RenderTransformOrigin="0.503,0.563"/>
         <Button Content="Submit" Grid.Column="2" HorizontalAlignment="Left" Margin="221,146,0,0" VerticalAlignment="Top" Height="32" Width="56" Click="Button_Click_2"/>
+
         <TextBox Grid.Column="1" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="45,88,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Name="recipientText" Grid.ColumnSpan="2"/>
         <TextBox Grid.Column="2" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Margin="301,88,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Name="donorText"/>
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="155,61,0,0" Text="Num1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Name="firstNumberInput" />
         <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="511,61,0,0" Text="Num2" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Name="secondNumberInput" RenderTransformOrigin="0.489,0.538" />
+
         <Label Content="Recipient start block number" Grid.Column="1" HorizontalAlignment="Left" Margin="45,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="165"/>
         <Label Content="Donor start block number" Grid.Column="2" HorizontalAlignment="Left" Margin="301,57,0,0" VerticalAlignment="Top"/>
+
+        <Button Content="Save as" Grid.Column="2" HorizontalAlignment="Left" Margin="221,277,0,0" Height="32" Width="56" VerticalAlignment="Top" Click="SaveAs"/>
 
     </Grid>
 </Window>

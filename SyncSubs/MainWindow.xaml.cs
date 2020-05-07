@@ -76,7 +76,7 @@ namespace SyncSubs
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void FindRecipientFileButtonClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -91,7 +91,7 @@ namespace SyncSubs
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void FindDonorFileButtonClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -106,7 +106,7 @@ namespace SyncSubs
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void SynchronizeButtonClick(object sender, RoutedEventArgs e)
         {
             if (!int.TryParse(firstNumberInput.Text, out int result) &&
                 !int.TryParse(secondNumberInput.Text, out int secondResult))
@@ -116,6 +116,16 @@ namespace SyncSubs
             }
 
             Synchronize(Convert.ToInt32(firstNumberInput.Text) - 1, Convert.ToInt32(secondNumberInput.Text) - 1);
+        }
+
+        private void SaveAs(object sender, RoutedEventArgs e)
+        {
+            if (recipientText == null)
+            {
+                MessageBox.Show("Please open subtitle file to save");
+                return;
+            }
+
         }
     }
 }
